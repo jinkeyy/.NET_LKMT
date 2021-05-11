@@ -78,6 +78,7 @@ namespace F_QLLKMT
         {
             FormAddHd formHd = new FormAddHd();
             formHd.ShowDialog();
+            showHd();
         }
 
         private void showNv()

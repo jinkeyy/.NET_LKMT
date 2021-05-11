@@ -15,7 +15,8 @@ namespace F_QLLKMT
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 connection.Open();
-                SqlCommand cm = new SqlCommand("INSERT INTO t_hoadonchitiet(id_hangnhap, soluong, id_hoadon) VALUES(" + id_hangnhap + "," + sl + ", " + id_hoadon + ") ", connection);
+                SqlCommand cm = new SqlCommand("INSERT INTO t_hoadonchitiet(id_hangnhap, soluong, id_hoadon) VALUES(" + id_hangnhap + "," + sl + "," + id_hoadon + ")", connection);
+                Console.WriteLine("INSERT INTO t_hoadonchitiet(id_hangnhap, soluong, id_hoadon) VALUES(" + id_hangnhap + "," + sl + "," + id_hoadon + ")");
                 cm.ExecuteReader();
                 connection.Close();
             }

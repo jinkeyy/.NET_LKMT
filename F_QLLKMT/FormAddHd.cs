@@ -145,11 +145,11 @@ namespace F_QLLKMT
                 for (int i = 0; i < list_sp.Items.Count; i++)
                 {
                     string[] arrListStr2 = list_sp.Items[i].Text.Split(' ');
-                    string idSp = arrListStr1[arrListStr.Length - 1];
-      
-                    hd.taoHoaDonChiTiet(idSp, list_sp.Items[i].SubItems[1].Text,idHd);
+                    string idSp = arrListStr2[arrListStr2.Length-1];
+                    hd.taoHoaDonChiTiet(idSp, Convert.ToString(list_sp.Items[i].SubItems[1].Text), idHd);
                 }
                 MessageBox.Show("Tạo Hóa Đơn thành công");
+                this.Close();
             }
             else
             {
@@ -240,7 +240,7 @@ namespace F_QLLKMT
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
                     connection.Open();
-                    SqlCommand cm = new SqlCommand("select * from t_hoadon inner join t_nhanvien on t_hoadon.id_nv = t_nhanvien.id inner join t_khachhang on t_khachhang.id = t_hoadon.id_khachhang where t_hoadon.id = " + id_hd , connection);
+                    SqlCommand cm = new SqlCommand("select t_hoadon.id,id_nv,id_khachhang,ngaytao,tenNhanVien,tenKhachHang,t_khachhang.diaChi,t_khachhang.soDienThoai from t_hoadon inner join t_nhanvien on t_hoadon.id_nv = t_nhanvien.id inner join t_khachhang on t_khachhang.id = t_hoadon.id_khachhang where t_hoadon.id = " + id_hd , connection);
                     SqlDataReader reader = cm.ExecuteReader();
                     if (reader.HasRows)
                     {
@@ -444,6 +444,11 @@ namespace F_QLLKMT
             exRange.Range["A6:C6"].Value = tenNhanVien;
             exSheet.Name = "Hóa đơn nhập";
             exApp.Visible = true;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

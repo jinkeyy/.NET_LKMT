@@ -31,6 +31,8 @@ namespace F_QLLKMT
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddHd));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textTongTien = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dateEditNgayTao = new DevExpress.XtraEditors.DateEdit();
@@ -41,6 +43,8 @@ namespace F_QLLKMT
             this.list_sp = new System.Windows.Forms.ListView();
             this.sanpham = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.soluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.giaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.thanhGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.txt_sl = new System.Windows.Forms.NumericUpDown();
             this.txt_sp = new System.Windows.Forms.ComboBox();
@@ -52,10 +56,6 @@ namespace F_QLLKMT
             this.textSdt = new System.Windows.Forms.TextBox();
             this.textDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.giaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.thanhGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textTongTien = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNgayTao.Properties)).BeginInit();
@@ -91,6 +91,24 @@ namespace F_QLLKMT
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm Hóa Đơn";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(339, 404);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Tổng tiền:";
+            // 
+            // textTongTien
+            // 
+            this.textTongTien.Enabled = false;
+            this.textTongTien.Location = new System.Drawing.Point(401, 401);
+            this.textTongTien.Name = "textTongTien";
+            this.textTongTien.Size = new System.Drawing.Size(95, 21);
+            this.textTongTien.TabIndex = 21;
             // 
             // simpleButton1
             // 
@@ -184,6 +202,14 @@ namespace F_QLLKMT
             // 
             this.soluong.Text = "Số Lượng";
             this.soluong.Width = 100;
+            // 
+            // giaBan
+            // 
+            this.giaBan.Text = "Giá Bán";
+            // 
+            // thanhGia
+            // 
+            this.thanhGia.Text = "Thành Giá";
             // 
             // label3
             // 
@@ -279,31 +305,6 @@ namespace F_QLLKMT
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Khách Hàng:";
-            // 
-            // giaBan
-            // 
-            this.giaBan.Text = "Giá Bán";
-            // 
-            // thanhGia
-            // 
-            this.thanhGia.Text = "Thành Giá";
-            // 
-            // textTongTien
-            // 
-            this.textTongTien.Enabled = false;
-            this.textTongTien.Location = new System.Drawing.Point(401, 401);
-            this.textTongTien.Name = "textTongTien";
-            this.textTongTien.Size = new System.Drawing.Size(95, 21);
-            this.textTongTien.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 404);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Tổng tiền:";
             // 
             // FormAddHd
             // 
